@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+
 </head>
 <body>
-    <h1>Shopping List</h1>
+    <h1>{{ msg }}</h1>
+    
+    <h2>Shopping List</h2>
     
     <ul>
         {% for task in tasks %}
-        <li> {{ task }}</li>
+        <li>{{ task }}</li>
         {% endfor %}
-       
     </ul>
     
     <hr>
     
-    <form action="/new_task" method="POST">
+    <form method="POST" action="/new_task">
         <input type="text" name="task_to_do"/>
-        <input type="submit" value="you must remember this">
+        <input type="submit" value="You must remember this...."/>
     </form>
+    
 </body>
 </html>
